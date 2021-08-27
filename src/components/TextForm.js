@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { CopyToClipboard } from "react-copy-to-clipboard";
+// import { CopyToClipboard } from "react-copy-to-clipboard";
 
 export default function TextForm(props) {
   const [text, setText] = useState("");
-  const [copied, setCopied] = useState(false);
+  // const [copied, setCopied] = useState(false);
   const handleUpClick = () => {
     // console.log("Uppercase was clicked" + text);
     let newText = text.toUpperCase();
@@ -15,12 +15,17 @@ export default function TextForm(props) {
   };
   const handleSpaces = () => {
     // console.log("On change");
-    let newText = text.trim();
-    setText(newText);
+    //regex to split the words into array and then join them with one space
+    let newText = text.split(/[ ]+/);
+    setText(newText.join(" "));
   };
   const handleOnCopy = () => {
-    setCopied(true);
+    // setCopied(true);
+    var text = document.getElementById("myBox");
+    text.select();
+    navigator.clipboard.writeText(text.value);
   };
+
   const handleReset = () => {
     setText("");
   };
@@ -61,11 +66,11 @@ export default function TextForm(props) {
         >
           Convert to Lowercase
         </button>
-        <CopyToClipboard text={text} onCopy={handleOnCopy}>
+        {/* <CopyToClipboard text={text} onCopy={handleOnCopy}>
           <button type="button" className="btn btn-outline-primary btn-sm mx-1">
             Copy to clipboard
           </button>
-        </CopyToClipboard>
+        </CopyToClipboard> */}
         <button
           type="button"
           className="btn btn-outline-primary btn-sm mx-1"
@@ -79,6 +84,13 @@ export default function TextForm(props) {
           onClick={handleReset}
         >
           Reset
+        </button>
+        <button
+          type="button"
+          className="btn btn-outline-primary btn-sm mx-1"
+          onClick={handleOnCopy}
+        >
+          Copy Text
         </button>
       </div>
       <div className="container-fluid my-3">
