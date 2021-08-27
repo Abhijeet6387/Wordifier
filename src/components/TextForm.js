@@ -9,16 +9,19 @@ export default function TextForm(props) {
     let newText = text.toUpperCase();
     setText(newText);
   };
+
   const handleLoClick = () => {
     let newText = text.toLowerCase();
     setText(newText);
   };
+
   const handleSpaces = () => {
     // console.log("On change");
     //regex to split the words into array and then join them with one space
     let newText = text.split(/[ ]+/);
     setText(newText.join(" "));
   };
+
   const handleOnCopy = () => {
     // setCopied(true);
     var text = document.getElementById("myBox");
@@ -28,6 +31,14 @@ export default function TextForm(props) {
 
   const handleReset = () => {
     setText("");
+  };
+
+  const handleTitleCase = () => {
+    let newText = text.split(" ").map((currentValue) => {
+      let newText = currentValue[0].toUpperCase() + currentValue.slice(1);
+      return newText;
+    });
+    setText(newText.join(" "));
   };
 
   const handleOnChange = (event) => {
@@ -81,16 +92,23 @@ export default function TextForm(props) {
         <button
           type="button"
           className="btn btn-outline-primary btn-sm mx-1"
-          onClick={handleReset}
+          onClick={handleOnCopy}
         >
-          Reset
+          Copy Text
         </button>
         <button
           type="button"
           className="btn btn-outline-primary btn-sm mx-1"
-          onClick={handleOnCopy}
+          onClick={handleTitleCase}
         >
-          Copy Text
+          Title Case
+        </button>
+        <button
+          type="button"
+          className="btn btn-outline-primary btn-sm mx-1"
+          onClick={handleReset}
+        >
+          Reset
         </button>
       </div>
       <div className="container-fluid my-3">
