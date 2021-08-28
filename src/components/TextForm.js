@@ -8,11 +8,13 @@ export default function TextForm(props) {
     // console.log("Uppercase was clicked" + text);
     let newText = text.toUpperCase();
     setText(newText);
+    props.showAlert("Converted to UpperCase!", "success");
   };
 
   const handleLoClick = () => {
     let newText = text.toLowerCase();
     setText(newText);
+    props.showAlert("Converted to LowerCase!", "success");
   };
 
   const handleSpaces = () => {
@@ -20,6 +22,7 @@ export default function TextForm(props) {
     //regex to split the words into array and then join them with one space
     let newText = text.split(/[ ]+/);
     setText(newText.join(" "));
+    props.showAlert("Whitespaces have been removed!", "success");
   };
 
   const handleOnCopy = () => {
@@ -27,18 +30,12 @@ export default function TextForm(props) {
     var text = document.getElementById("myBox");
     text.select();
     navigator.clipboard.writeText(text.value);
+    props.showAlert("Copied to clipboard!", "success");
   };
 
   const handleReset = () => {
     setText("");
-  };
-
-  const handleTitleCase = () => {
-    let newText = text.split(" ").map((currentValue) => {
-      let newText = currentValue[0].toUpperCase() + currentValue.slice(1);
-      return newText;
-    });
-    setText(newText.join(" "));
+    props.showAlert("Cleared!", "success");
   };
 
   const handleOnChange = (event) => {
@@ -118,17 +115,7 @@ export default function TextForm(props) {
             >
               Copy Text
             </button>
-            <button
-              type="button"
-              className={
-                props.mode === "light"
-                  ? "btn btn-outline-primary btn-sm mx-1"
-                  : "btn btn-primary btn-sm mx-1"
-              }
-              onClick={handleTitleCase}
-            >
-              Title Case
-            </button>
+
             <button
               type="button"
               className={
