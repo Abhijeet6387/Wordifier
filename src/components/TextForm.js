@@ -50,78 +50,86 @@ export default function TextForm(props) {
   //setText("new text"); - correct way to change the state
   return (
     <>
-      <div className="container-fluid">
-        <h4 className="my-3">{props.heading}</h4>
-        <div className="mb-3">
-          {/* <label for="myBox" className="form-label">Example textarea</label> */}
-          <textarea
-            className="form-control"
-            value={text}
-            onChange={handleOnChange}
-            id="myBox"
-            rows="8"
-          ></textarea>
-        </div>
-        {/* you can add custom css if you want */}
-        <button
-          type="button"
-          className="btn btn-outline-primary btn-sm mx-1"
-          onClick={handleUpClick}
-        >
-          Convert to Uppercase
-        </button>
-        <button
-          type="button"
-          className="btn btn-outline-primary btn-sm mx-1"
-          onClick={handleLoClick}
-        >
-          Convert to Lowercase
-        </button>
-        {/* <CopyToClipboard text={text} onCopy={handleOnCopy}>
+      <div style={{ color: props.mode === "dark" ? "white" : "black" }}>
+        <div className="container-fluid">
+          <h4 className="my-3">{props.heading}</h4>
+          <div className="mb-3">
+            {/* <label for="myBox" className="form-label">Example textarea</label> */}
+            <textarea
+              className="form-control"
+              value={text}
+              onChange={handleOnChange}
+              style={{
+                backgroundColor: props.mode === "dark" ? "grey" : "white",
+                color: props.mode === "dark" ? "white" : "black",
+              }}
+              id="myBox"
+              rows="8"
+            ></textarea>
+          </div>
+          {/* you can add custom css if you want */}
+          <button
+            type="button"
+            className="btn btn-outline-primary btn-sm mx-1"
+            onClick={handleUpClick}
+          >
+            Convert to Uppercase
+          </button>
+          <button
+            type="button"
+            className="btn btn-outline-primary btn-sm mx-1"
+            onClick={handleLoClick}
+          >
+            Convert to Lowercase
+          </button>
+          {/* <CopyToClipboard text={text} onCopy={handleOnCopy}>
           <button type="button" className="btn btn-outline-primary btn-sm mx-1">
             Copy to clipboard
           </button>
         </CopyToClipboard> */}
-        <button
-          type="button"
-          className="btn btn-outline-primary btn-sm mx-1"
-          onClick={handleSpaces}
-        >
-          Remove Spaces
-        </button>
-        <button
-          type="button"
-          className="btn btn-outline-primary btn-sm mx-1"
-          onClick={handleOnCopy}
-        >
-          Copy Text
-        </button>
-        <button
-          type="button"
-          className="btn btn-outline-primary btn-sm mx-1"
-          onClick={handleTitleCase}
-        >
-          Title Case
-        </button>
-        <button
-          type="button"
-          className="btn btn-outline-primary btn-sm mx-1"
-          onClick={handleReset}
-        >
-          Reset
-        </button>
-      </div>
-      <div className="container-fluid my-3">
-        <h4>Text Summary</h4>
-        <p>
-          {text.split(" ").length} words and {text.length} characters
-        </p>
-        <p>
-          Estimated time to read : {Math.round(text.split(" ").length * 0.008)}{" "}
-          minutes
-        </p>
-        <h4>Preview</h4>
-        <p>{text}</p>
+          <button
+            type="button"
+            className="btn btn-outline-primary btn-sm mx-1"
+            onClick={handleSpaces}
+          >
+            Remove Spaces
+          </button>
+          <button
+            type="button"
+            className="btn btn-outline-primary btn-sm mx-1"
+            onClick={handleOnCopy}
+          >
+            Copy Text
+          </button>
+          <button
+            type="button"
+            className="btn btn-outline-primary btn-sm mx-1"
+            onClick={handleTitleCase}
+          >
+            Title Case
+          </button>
+          <button
+            type="button"
+            className="btn btn-outline-primary btn-sm mx-1"
+            onClick={handleReset}
+          >
+            Reset
+          </button>
+        </div>
+        <div className="container-fluid my-3">
+          <h4>Text Summary</h4>
+          <p>
+            {text.split(" ").length} words and {text.length} characters
+          </p>
+          <p>
+            Estimated time to read :{" "}
+            {Math.round(text.split(" ").length * 0.008)} minutes
+          </p>
+          <h4>Preview</h4>
+          <p>
+            {text.length > 0 ? text : "Enter your text to preview it here!"}
+          </p>
+        </div>
       </div>
     </>
   );
