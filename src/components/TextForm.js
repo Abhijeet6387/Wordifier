@@ -70,14 +70,22 @@ export default function TextForm(props) {
           {/* you can add custom css if you want */}
           <button
             type="button"
-            className="btn btn-outline-primary btn-sm mx-1"
+            className={
+              props.mode === "light"
+                ? "btn btn-outline-primary btn-sm mx-1"
+                : "btn btn-primary btn-sm mx-1"
+            }
             onClick={handleUpClick}
           >
             Convert to Uppercase
           </button>
           <button
             type="button"
-            className="btn btn-outline-primary btn-sm mx-1"
+            className={
+              props.mode === "light"
+                ? "btn btn-outline-primary btn-sm mx-1"
+                : "btn btn-primary btn-sm mx-1"
+            }
             onClick={handleLoClick}
           >
             Convert to Lowercase
@@ -89,28 +97,44 @@ export default function TextForm(props) {
         </CopyToClipboard> */}
           <button
             type="button"
-            className="btn btn-outline-primary btn-sm mx-1"
+            className={
+              props.mode === "light"
+                ? "btn btn-outline-primary btn-sm mx-1"
+                : "btn btn-primary btn-sm mx-1"
+            }
             onClick={handleSpaces}
           >
             Remove Spaces
           </button>
           <button
             type="button"
-            className="btn btn-outline-primary btn-sm mx-1"
+            className={
+              props.mode === "light"
+                ? "btn btn-outline-primary btn-sm mx-1"
+                : "btn btn-primary btn-sm mx-1"
+            }
             onClick={handleOnCopy}
           >
             Copy Text
           </button>
           <button
             type="button"
-            className="btn btn-outline-primary btn-sm mx-1"
+            className={
+              props.mode === "light"
+                ? "btn btn-outline-primary btn-sm mx-1"
+                : "btn btn-primary btn-sm mx-1"
+            }
             onClick={handleTitleCase}
           >
             Title Case
           </button>
           <button
             type="button"
-            className="btn btn-outline-primary btn-sm mx-1"
+            className={
+              props.mode === "light"
+                ? "btn btn-outline-primary btn-sm mx-1"
+                : "btn btn-primary btn-sm mx-1"
+            }
             onClick={handleReset}
           >
             Reset
