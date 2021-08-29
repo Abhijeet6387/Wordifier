@@ -24,6 +24,8 @@ function App() {
       setMode("dark");
       document.body.style.backgroundColor = "#343a40";
       showAlert("Darkmode has been enabled!", "success");
+      // to change the title dynamically
+      // document.title = "Wordifier - Dark";
     } else {
       setMode("light");
       document.body.style.backgroundColor = "white";
@@ -32,7 +34,7 @@ function App() {
   };
   return (
     <>
-      <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
+      <Navbar title="Wordifier" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} />
       <div className="container-fluid">
         <TextForm
