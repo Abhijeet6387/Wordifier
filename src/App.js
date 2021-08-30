@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
 import TextForm from "./components/TextForm";
-import About from "./components/About";
+// import About from "./components/About";
 import Alert from "./components/Alert";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   const [mode, setMode] = useState("light");
@@ -35,27 +35,28 @@ function App() {
   };
   return (
     <>
-      <Router>
-        <Navbar title="Wordifier" mode={mode} toggleMode={toggleMode} />
-        <Alert alert={alert} />
-        <div className="container-fluid">
-          <Switch>
+      {/* since it will be difficult to deploy routes based react apps on github thus about has be commented */}
+      {/* <Router> */}
+      <Navbar title="Wordifier" mode={mode} toggleMode={toggleMode} />
+      <Alert alert={alert} />
+      <div className="container-fluid">
+        {/* <Switch>
             {/* exact path is used because react does partial matching for example in 
             /user -> Component1
             /user/home -> Component2 */}
-            <Route exact path="/about">
+        {/* <Route exact path="/about">
               <About />
-            </Route>
-            <Route exact path="/">
-              <TextForm
-                showAlert={showAlert}
-                heading="Enter text to analyze"
-                mode={mode}
-              />
-            </Route>
-          </Switch>
-        </div>
-      </Router>
+            </Route> */}
+        {/* <Route exact path="/"> */}
+        <TextForm
+          showAlert={showAlert}
+          heading="Enter text to analyze"
+          mode={mode}
+        />
+        {/* </Route>
+          </Switch> */}
+      </div>
+      {/* </Router> */}
     </>
   );
 }
