@@ -131,7 +131,13 @@ export default function TextForm(props) {
           <div className="container-fluid my-3">
             <h4>Text Summary</h4>
             <p>
-              {text.split(" ").length} words and {text.length} characters
+              {
+                // filter method to remove the 0 word bug
+                text.split(" ").filter((element) => {
+                  return element.length != 0;
+                }).length
+              }{" "}
+              words and {text.length} characters
             </p>
             <p>
               Estimated time to read :{" "}
