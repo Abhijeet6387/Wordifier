@@ -50,7 +50,7 @@ function App() {
         {/* <Route exact path="/"> */}
         <TextForm
           showAlert={showAlert}
-          heading="Enter text to analyze"
+          heading="Wordifier - Word Counter, Character Counter, Remove Extra Spaces"
           mode={mode}
         />
         {/* </Route>

@@ -70,8 +70,8 @@ export default function TextForm(props) {
               type="button"
               className={
                 props.mode === "light"
-                  ? "btn btn-outline-primary btn-sm mx-1"
-                  : "btn btn-primary btn-sm mx-1"
+                  ? "btn btn-outline-primary btn-sm mx-1 my-1"
+                  : "btn btn-primary btn-sm mx-1 my-1"
               }
               onClick={handleUpClick}
             >
@@ -81,8 +81,8 @@ export default function TextForm(props) {
               type="button"
               className={
                 props.mode === "light"
-                  ? "btn btn-outline-primary btn-sm mx-1"
-                  : "btn btn-primary btn-sm mx-1"
+                  ? "btn btn-outline-primary btn-sm mx-1 my-1"
+                  : "btn btn-primary btn-sm mx-1 my-1"
               }
               onClick={handleLoClick}
             >
@@ -97,8 +97,8 @@ export default function TextForm(props) {
               type="button"
               className={
                 props.mode === "light"
-                  ? "btn btn-outline-primary btn-sm mx-1"
-                  : "btn btn-primary btn-sm mx-1"
+                  ? "btn btn-outline-primary btn-sm mx-1 my-1"
+                  : "btn btn-primary btn-sm mx-1 my-1"
               }
               onClick={handleSpaces}
             >
@@ -108,8 +108,8 @@ export default function TextForm(props) {
               type="button"
               className={
                 props.mode === "light"
-                  ? "btn btn-outline-primary btn-sm mx-1"
-                  : "btn btn-primary btn-sm mx-1"
+                  ? "btn btn-outline-primary btn-sm mx-1 my-1"
+                  : "btn btn-primary btn-sm mx-1 my-1"
               }
               onClick={handleOnCopy}
             >
@@ -120,8 +120,8 @@ export default function TextForm(props) {
               type="button"
               className={
                 props.mode === "light"
-                  ? "btn btn-outline-primary btn-sm mx-1"
-                  : "btn btn-primary btn-sm mx-1"
+                  ? "btn btn-outline-primary btn-sm mx-1 my-1"
+                  : "btn btn-primary btn-sm mx-1 my-1"
               }
               onClick={handleReset}
             >
@@ -134,7 +134,7 @@ export default function TextForm(props) {
               {
                 // filter method to remove the 0 word bug
                 text.split(" ").filter((element) => {
-                  return element.length != 0;
+                  return element.length !== 0;
                 }).length
               }{" "}
               words and {text.length} characters
