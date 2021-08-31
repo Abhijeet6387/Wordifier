@@ -28,9 +28,10 @@ export default function TextForm(props) {
   const handleOnCopy = () => {
     // setCopied(true);
     var text = document.getElementById("myBox");
-    text.select();
+    // using navigator - no need to select and deselect
+    // text.select();
     navigator.clipboard.writeText(text.value);
-    document.getSelection().removeAllRanges();
+    // document.getSelection().removeAllRanges();
     props.showAlert("Copied to clipboard!", "success");
   };
 
@@ -134,7 +135,7 @@ export default function TextForm(props) {
             <p>
               {
                 // filter method to remove the 0 word bug
-                text.split(" ").filter((element) => {
+                text.split(/\s+/).filter((element) => {
                   return element.length !== 0;
                 }).length
               }{" "}
