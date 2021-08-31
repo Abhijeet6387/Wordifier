@@ -146,7 +146,9 @@ export default function TextForm(props) {
             </p>
             <h4>Preview</h4>
             <p>
-              {text.length > 0 ? text : "Enter your text to preview it here!"}
+              {text.length > 0
+                ? text
+                : "Wordifier gives you a way to analyze your text quickly and efficiently. It is a free web tool that provides an instant word & character count. It includes features such as converting to upper and lower cases, removing witespaces etc."}
             </p>
           </div>
         </div>
