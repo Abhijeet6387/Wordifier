@@ -13,7 +13,7 @@ Key Features :<br>
   <li><strong>Dark Mode</strong> - To keep you safe from excess screen time</li>
 </ul>
 <hr>
-<p>Tech Stacks used in the project are :- </p>
+<p>Technologies used in the project are :- </p>
 <ol>
   <li> Reactjs
   <li> Bootstrap
