@@ -2,6 +2,7 @@
 Wordifier is a web tool to format and edit your texts in a simple and efficient way. It includes various features to help you modify your texts, essays and articles at your fingertips. <br><br>
 
 Key Features :<br>
+
 <ul>
 <li>Covert to Lower/Upper Case
 <li>Clear all text From the text area
@@ -22,8 +23,6 @@ Key Features :<br>
   <li> CSS
 </ol>
 
-
-
 Live at - https://abhijeet6387.github.io/Wordifier/
 
-Thanks for reading this!🙌🙌🙌
+Thanks for reading this!🙌🙌
