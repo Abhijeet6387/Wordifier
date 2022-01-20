@@ -35,28 +35,15 @@ function App() {
   };
   return (
     <>
-      {/* since it will be difficult to deploy routes based react apps on github thus about has be commented */}
-      {/* <Router> */}
       <Navbar title="Wordifier" mode={mode} toggleMode={toggleMode} />
       <Alert alert={alert} />
       <div className="container-fluid">
-        {/* <Switch>
-            {/* exact path is used because react does partial matching for example in 
-            /user -> Component1
-            /user/home -> Component2 */}
-        {/* <Route exact path="/about">
-              <About />
-            </Route> */}
-        {/* <Route exact path="/"> */}
         <TextForm
           showAlert={showAlert}
           heading="Wordifier - Word Counter, Character Counter, Remove Extra Spaces"
           mode={mode}
-        />
-        {/* </Route>
-          </Switch> */}
+        ></TextForm>
       </div>
-      {/* </Router> */}
     </>
   );
 }

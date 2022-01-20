@@ -90,11 +90,6 @@ export default function TextForm(props) {
             >
               Convert to Lowercase
             </button>
-            {/* <CopyToClipboard text={text} onCopy={handleOnCopy}>
-          <button type="button" className="btn btn-outline-primary btn-sm mx-1">
-            Copy to clipboard
-          </button>
-        </CopyToClipboard> */}
             <button
               type="button"
               className={
@@ -117,7 +112,6 @@ export default function TextForm(props) {
             >
               Copy Text
             </button>
-
             <button
               type="button"
               className={
@@ -129,6 +123,19 @@ export default function TextForm(props) {
             >
               Reset
             </button>
+            <div style={{ float: "right" }}>
+              <a
+                className={
+                  props.mode === "light"
+                    ? "btn btn-outline-danger btn-sm mx-1 my-1"
+                    : "btn btn-danger btn-sm mx-1 my-1"
+                }
+                style={{ textDecoration: "none" }}
+                href="https://doc-maker-ui.herokuapp.com"
+              >
+                Create a Doc
+              </a>
+            </div>
           </div>
           <div className="container-fluid my-3">
             <h4>Text Summary</h4>
