@@ -26,6 +26,6 @@ Key Features :<br>
   <li>MongoDB
 </ol>
 
-Live at - https://simple-wordifier.herokuapp.com
+Live at - https://wordifierdeploy.vercel.app/
 
 Thanks for reading this!🙌🙌
