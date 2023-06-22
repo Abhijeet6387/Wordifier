@@ -123,7 +123,7 @@ export default function TextForm(props) {
             >
               Reset
             </button>
-            <div style={{ float: "right" }}>
+            {/* <div style={{ float: "right" }}>
               <a
                 className={
                   props.mode === "light"
@@ -135,7 +135,7 @@ export default function TextForm(props) {
               >
                 Create a Doc
               </a>
-            </div>
+            </div> */}
           </div>
           <div className="container-fluid my-3">
             <h4>Text Summary</h4>
