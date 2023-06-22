@@ -12,7 +12,6 @@ Key Features :<br>
 <li>Words & Characters Counter
 <li>Preview your text, &
   <li><strong>Dark Mode</strong> - To keep you safe from excess screen time</li>
-<li>A complete text-editor to make a document with all the features available.
 </ul>
 <hr>
 <p>Technologies used in the project are :- </p>
@@ -22,8 +21,6 @@ Key Features :<br>
   <li> JavaScript
   <li> HTML
   <li> CSS
-  <li> Quilljs
-  <li>MongoDB
 </ol>
 
 Live at - https://wordifierdeploy.vercel.app/
